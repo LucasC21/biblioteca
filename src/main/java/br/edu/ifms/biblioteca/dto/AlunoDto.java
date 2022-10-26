@@ -2,6 +2,8 @@ package br.edu.ifms.biblioteca.dto;
 
 import java.io.Serializable;
 
+import br.edu.ifms.biblioteca.model.Aluno;
+
 public class AlunoDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -15,13 +17,13 @@ public class AlunoDto implements Serializable {
 	
 	}
 
-	public AlunoDto(Integer id, int maricula, String nome, int turma, String disciplina) {
+	public AlunoDto(Aluno obj) {
 		super();
-		this.id = id;
-		this.maricula = maricula;
-		this.nome = nome;
-		this.turma = turma;
-		this.disciplina = disciplina;
+		this.id = obj.getId();
+		this.maricula = obj.getMaricula();
+		this.nome = obj.getNome();
+		this.turma = obj.getTurma();
+		this.disciplina = obj.getDisciplina();
 	}
 
 	public Integer getId() {
