@@ -2,6 +2,8 @@ package br.edu.ifms.biblioteca.dto;
 
 import java.io.Serializable;
 
+import br.edu.ifms.biblioteca.model.Livro;
+
 public class LivroDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -14,12 +16,12 @@ public class LivroDto implements Serializable{
 	
 	}
 
-	public LivroDto(int idLivro, String titulo, int edicao, int exemplares) {
+	public LivroDto(Livro obj) {
 		super();
-		this.idLivro = idLivro;
-		this.titulo = titulo;
-		this.edicao = edicao;
-		this.exemplares = exemplares;
+		this.idLivro = obj.getIdLivro();
+		this.titulo = obj.getTitulo();
+		this.edicao = obj.getEdicao();
+		this.exemplares = obj.getExemplares();
 	}
 
 	public int getIdLivro() {

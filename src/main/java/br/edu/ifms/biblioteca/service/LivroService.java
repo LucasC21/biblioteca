@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import br.edu.ifms.biblioteca.dto.LivroDto;
 import br.edu.ifms.biblioteca.model.Livro;
 import br.edu.ifms.biblioteca.repository.LivroRepository;
 import br.edu.ifms.biblioteca.service.exception.DataIntegrityException;
@@ -47,6 +48,10 @@ public class LivroService {
 	
 	public List<Livro> findAll() {
 		return livroRepo.findAll();
+	}
+	
+	public Livro fromDto(LivroDto objDto) {
+		return new Livro(objDto.getIdLivro(), objDto.getTitulo(), objDto.getEdicao(), objDto.getExemplares(), null, null);
 	}
 	
 	private void updateData(Livro newObj, Livro obj) {

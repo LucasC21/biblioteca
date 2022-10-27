@@ -2,6 +2,8 @@ package br.edu.ifms.biblioteca.dto;
 
 import java.io.Serializable;
 
+import br.edu.ifms.biblioteca.model.Autor;
+
 public class AutorDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -12,10 +14,10 @@ public class AutorDto implements Serializable {
 		
 	}
 
-	public AutorDto(int idAutor, String nome) {
+	public AutorDto(Autor obj) {
 		super();
-		this.idAutor = idAutor;
-		this.nome = nome;
+		this.idAutor = obj.getIdAutor();
+		this.nome = obj.getNome();
 	}
 
 	public int getIdAutor() {

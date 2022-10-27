@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import br.edu.ifms.biblioteca.dto.CategoriaDto;
 import br.edu.ifms.biblioteca.model.Categoria;
 import br.edu.ifms.biblioteca.repository.CategoriaRepository;
 import br.edu.ifms.biblioteca.service.exception.DataIntegrityException;
@@ -49,7 +50,7 @@ public class CategoriaService {
 		return categoriaRepo.findAll();
 	}
 	
-	public Categoria fromDto(Categoria objDto) {
+	public Categoria fromDto(CategoriaDto objDto) {
 		return new Categoria(objDto.getIdCategoria(), objDto.getNome());
 	}
 	

@@ -2,6 +2,8 @@ package br.edu.ifms.biblioteca.dto;
 
 import java.io.Serializable;
 
+import br.edu.ifms.biblioteca.model.Categoria;
+
 public class CategoriaDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -12,10 +14,10 @@ public class CategoriaDto implements Serializable {
 		
 	}
 
-	public CategoriaDto(int idCategoria, String nome) {
+	public CategoriaDto(Categoria obj) {
 		super();
-		this.idCategoria = idCategoria;
-		this.nome = nome;
+		this.idCategoria = obj.getIdCategoria();
+		this.nome = obj.getNome();
 	}
 
 	public int getIdCategoria() {

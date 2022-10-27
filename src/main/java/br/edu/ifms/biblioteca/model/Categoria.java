@@ -49,8 +49,6 @@ public class Categoria implements Serializable{
 		this.nome = nome;
 	}
 	
-	
-
 	public List<Livro> getLivros() {
 		return livros;
 	}

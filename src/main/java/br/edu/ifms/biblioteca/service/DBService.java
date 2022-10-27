@@ -33,6 +33,7 @@ public class DBService {
 		Aluno aluno2= new Aluno(null, 345, "Renan", 2222, "Desenvolvimento web");
 		Aluno aluno3= new Aluno(null, 567, "Maria", 3333, "Programação de computadores");
 		Aluno aluno4= new Aluno(null, 789, "Marcos", 4444, "Empreendedorismo");
+		Aluno aluno5= new Aluno(null, 901, "Roberto", 5555, "Desenvolvimento web");
 		
 		Autor autor1= new Autor(1, "Chad Fowler");
 		Autor autor2= new Autor(2, "Donald Miller");
@@ -49,7 +50,7 @@ public class DBService {
 		Livro livro3= new Livro(3, "O Programador Apaixonado: Construindo uma carreira notável em desenvolvimento de software", 4, 25, aluno3, categoria3);
 		Livro livro4= new Livro(4, "Aprendendo a Desenvolver Aplicações Web: Desenvolva Rapidamente com as Tecnologias JavaScript Mais Modernas", 5, 40, aluno2, categoria4);
 		
-		aluno.saveAll(Arrays.asList(aluno1, aluno2, aluno3, aluno4));
+		aluno.saveAll(Arrays.asList(aluno1, aluno2, aluno3, aluno4, aluno5));
 		autor.saveAll(Arrays.asList(autor1, autor2, autor3, autor4));
 		categoria.saveAll(Arrays.asList(categoria1, categoria2, categoria3, categoria4));
 		livro.saveAll(Arrays.asList(livro1, livro2, livro3, livro4));
