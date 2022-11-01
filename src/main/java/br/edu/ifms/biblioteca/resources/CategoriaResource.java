@@ -23,6 +23,9 @@ import br.edu.ifms.biblioteca.service.CategoriaService;
 @RequestMapping(value = "/categoria")
 public class CategoriaResource {
 
+	
+	
+	
 	@Autowired
 	private CategoriaService categoriaServ;
 	
