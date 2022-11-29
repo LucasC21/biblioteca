@@ -19,7 +19,7 @@ public class Aluno implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private int maricula;
+	private int matricula;
 	private String nome;
 	private int turma;
 	private String disciplina;
@@ -30,10 +30,10 @@ public class Aluno implements Serializable {
 		
 	}
 
-	public Aluno(Integer id, int maricula, String nome, int turma, String disciplina) {
+	public Aluno(Integer id, int matricula, String nome, int turma, String disciplina) {
 		super();
 		this.id = id;
-		this.maricula = maricula;
+		this.matricula = matricula;
 		this.nome = nome;
 		this.turma = turma;
 		this.disciplina = disciplina;
@@ -47,12 +47,12 @@ public class Aluno implements Serializable {
 		this.id = id;
 	}
 
-	public int getMaricula() {
-		return maricula;
+	public int getMatricula() {
+		return matricula;
 	}
 
-	public void setMaricula(int maricula) {
-		this.maricula = maricula;
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
 	}
 
 	public String getNome() {

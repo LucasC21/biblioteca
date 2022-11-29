@@ -50,12 +50,12 @@ public class AlunoService {
 	}
 	
 	public Aluno fromDto(AlunoDto objDto) {
-		return new Aluno(objDto.getId(), objDto.getMaricula(), objDto.getNome(), objDto.getTurma(), objDto.getDisciplina());
+		return new Aluno(objDto.getId(), objDto.getMatricula(), objDto.getNome(), objDto.getTurma(), objDto.getDisciplina());
 	}
 	
 	private void updateData(Aluno newObj, Aluno obj) {
 		newObj.setNome(obj.getNome());
-		newObj.setMaricula(obj.getMaricula());
+		newObj.setMatricula(obj.getMatricula());
 		newObj.setTurma(obj.getTurma());
 		newObj.setDisciplina(obj.getDisciplina());
 	}

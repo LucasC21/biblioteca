@@ -8,7 +8,7 @@ public class AlunoDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
-	private int maricula;
+	private int matricula;
 	private String nome;
 	private int turma;
 	private String disciplina;
@@ -20,7 +20,7 @@ public class AlunoDto implements Serializable {
 	public AlunoDto(Aluno obj) {
 		super();
 		this.id = obj.getId();
-		this.maricula = obj.getMaricula();
+		this.matricula = obj.getMatricula();
 		this.nome = obj.getNome();
 		this.turma = obj.getTurma();
 		this.disciplina = obj.getDisciplina();
@@ -34,12 +34,12 @@ public class AlunoDto implements Serializable {
 		this.id = id;
 	}
 
-	public int getMaricula() {
-		return maricula;
+	public int getMatricula() {
+		return matricula;
 	}
 
-	public void setMaricula(int maricula) {
-		this.maricula = maricula;
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
 	}
 
 	public String getNome() {
